@@ -9,7 +9,7 @@ ORDER BY month;
 <img width="383" height="217" alt="image" src="https://github.com/user-attachments/assets/5337013e-a893-485e-8980-0a0508009f52" />
 
 ### Analysis: 
-- Operating profit increases steadily from Month 1 to Month 3, indicating improving revenue–cost balance early in the year. The highest profit occurs in Month 8 (₹532,551), driven primarily by higher revenue, while costs also increase proportionally. Profit remains relatively stable through the mid-year period (Months 5–11), reflecting consistent operational performance despite rising production and cost. A soft decline appears in Month 12, suggesting seasonal effects or elevated year-end costs. Overall, the trend shows healthy profitability with mid-year peaks and mild fluctuations.
+-Operating profit increases steadily from Month 1 to Month 3, indicating an improving revenue–cost balance early in the year. The highest profit occurs in Month 8 (₹532,551), coinciding with higher overall business activity, while costs also increase proportionally. Profit remains relatively stable through the mid-year period (Months 5–11), reflecting consistent operational performance despite rising production and cost levels. A soft decline appears in Month 12, suggesting possible seasonal effects or elevated year-end costs. Overall, the trend shows healthy profitability with mid-year peaks and mild fluctuations.
 
 
 ##	Q2. Calculated OP by Quarter
@@ -23,8 +23,8 @@ ORDER BY Quarter;
 
 ### Analysis:
 - Growth can be observed in the first 3 quarters with operating profit growing rapidly from Q1 to Q3 until Q4 where the profit fell. 
-The decline in Q4 operating profit reflects rising total costs relative to revenue growth, as confirmed by the declining operating margin in Q4
-Overall growth has been observed in the business & the loss in Q4 could be a minor anomaly 
+The decline in Q4 operating profit reflects rising total costs relative to revenue growth, as confirmed by the declining operating margin in Q4. 
+Overall growth is observed across the year, with Q4 showing a moderation in operating profit driven by rising costs rather than a structural decline.
 
 ##	Q3. Plot and analyse the difference between Planned OP & Actual OP
 <img width="603" height="345" alt="image" src="https://github.com/user-attachments/assets/3d55fcc4-5baf-4834-8849-5288a269d05a" />
@@ -71,8 +71,8 @@ ORDER BY Quarter;
 <img width="657" height="142" alt="image" src="https://github.com/user-attachments/assets/ec53bc8e-67ab-469b-bda9-095409bfd7c2" />
  
 ### Analysis:
-- Based on the table we can observes a steady growth in the revenue every quarter which means that the company is effectively utilising the resources to increase production which in turn would increase the revenue generated. This allows the company to grow and scale upwards.
-Even though growth is observed in every quarter, the declining growth rate suggests diminishing marginal returns on capacity expansion, it may fall below 0. Diagnostic analysis is required to find the reason behind this falling trend to find the reason behind this so that necessary plans can be made to tackle it head on before the next cycle.  
+- The table shows steady quarter-over-quarter revenue growth, indicating consistent business expansion across the year. This reflects effective scaling of operations and sustained demand, enabling the company to grow revenue sequentially.
+- Although revenue continues to increase each quarter, the declining growth rate suggests diminishing marginal gains as scale increases. This trend signals a potential slowdown in incremental revenue expansion and warrants further diagnostic analysis to understand capacity constraints, cost pressures, or demand saturation before the next planning cycle.  
 
 ##	Q6. Determine which day of the week consistently shows the highest production volume (ActVol). Also check if the pattern changes across quarters.
 ```SQL
@@ -84,7 +84,7 @@ ORDER BY Tot_Volume DESC;
 <img width="251" height="223" alt="image" src="https://github.com/user-attachments/assets/3c11efc1-8b58-40c5-a87b-b33146bfee13" />
 
 ### Analysis: 
-- Weekday 6 is the most consistent day of the production with a producing averaging at 2218.5192 throughout the year. The production process of Weekday 6 should be analysed and implemented it to other days to improve their production capacity
+- Weekday 6 records the highest average production volume across the year, with an average output of approximately 2,218 units per day. This indicates that production levels tend to be higher on this weekday relative to others. While the result highlights a clear pattern in output distribution, further analysis is required to understand the operational, scheduling, or demand-related factors driving this difference before attempting replication across other days.
 
 ##	Q7. Determine which quarter of the year consistently shows the highest production volume
 ```SQL
@@ -142,8 +142,7 @@ LIMIT 10;
 
 
 ### Analysis:
-- 25th October is the date with the highest profit of 23,529.
-- An obscure pattern which can be noticed here is that 9 out top 10 days with the most profit are all in the 2nd half of the year implying efficient production process, higher number of production lines running etc leading to higher production on then to more revenue. Proper analysis needs to be done to find the cause behind this and implemented on the first half of year to improve it’s production capacity.  
+- 25th October records the highest operating profit of ₹23,529. An observable pattern is that 9 of the top 10 most profitable days occur in the second half of the year, indicating a period of stronger financial performance during this phase. This clustering suggests that profitability improves later in the year, potentially due to higher production scale, revenue levels, or cost dynamics. However, further analysis is required to identify the underlying drivers before drawing operational conclusions or applying learnings to the first half of the year.
 
 ## Q11.	Calculate weekly volatility of revenue using:StdDev(ActRevenue) window function per week number.
 ```SQL
@@ -315,7 +314,7 @@ ORDER BY Date;
 
                          
 ### Analysis:
-- The 7-day rolling window clearly highlights several unexpected dips where both volume and revenue fall more than 10% below trend. These dips occur frequently through the month, indicating short-term volatility rather than isolated anomalies. Most flagged days show simultaneous drops in both volume and revenue, suggesting operational disruptions rather than demand-side noise. A few exceptions show normal revenue but dipped volume or vice-versa, pointing to potential pricing or mix effects. Overall, the pattern reveals consistent daily underperformance clusters, signaling that stability issues may be systemic rather than random.
+- The 7-day rolling window highlights several unexpected dips where both volume and revenue fall more than 10% below their recent trends. These dips occur at multiple points during the year, indicating short-term volatility rather than isolated one-off anomalies. In most flagged cases, both volume and revenue decline simultaneously, suggesting periods of operational or market-driven disruption. A smaller number of instances show divergence between volume and revenue, which may reflect pricing or product-mix effects. Overall, the results point to recurring short-term fluctuations that warrant deeper investigation to determine their underlying causes.
 ---
 ## Q19.	Create a Production Efficiency Dashboard showing:Plan vs Actual Volume, Efficiency (%), Trend over months
 
